@@ -10,6 +10,7 @@ import { WeatherForecastResponse } from '../models/weatherForecast.model';
 export class WeatherMainComponent implements OnInit {
   @Input() targetConversion: string;
   @Input() currentlyWeatherForecast: WeatherForecastResponse;
+  @Input() cityName: string;
   iconStatus = STATUS;
   constructor() { }
 
