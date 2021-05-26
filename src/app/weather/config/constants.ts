@@ -1,0 +1,1 @@
+export const DEGREE = { celisius:'c' , fahrenheit:'f'};
