@@ -1,10 +1,10 @@
 export interface GeoLocationPosition {
-    coords:{ longitude: number; latitude: number};
+    coords: { longitude: number; latitude: number};
     timestamp: number;
 }
 
 export interface GeolocationResponse {
-    data : {
+    data: {
         longitude: number;
         latitude: number;
         county: string;

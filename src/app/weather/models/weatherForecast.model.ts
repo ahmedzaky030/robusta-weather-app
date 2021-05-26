@@ -2,7 +2,7 @@ export interface WeatherForecastResponse {
     latitude: number;
     longitude: number;
     timezone: string;
-    currently: { 
+    currently: {
         summary: string;
         icon: string;
         time: number;
@@ -18,8 +18,7 @@ export interface WeatherForecastResponse {
         summary: string;
         icon: string;
         data: WeatherForecastUnit[];
-    }
-
+    };
 }
 
 export interface WeatherForecastUnit {

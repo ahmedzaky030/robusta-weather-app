@@ -9,7 +9,7 @@ import { WeatherForecastResponse } from '../models/weatherForecast.model';
 export class WeatherFooterComponent implements OnInit {
   @Input() targetConversion: string;
   @Input() weatherForecast: WeatherForecastResponse;
-  activeTab: string ='hourly'
+  activeTab = 'hourly';
   constructor() { }
 
   ngOnInit(): void {

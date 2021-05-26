@@ -20,10 +20,10 @@ export class WeatherComponent implements OnInit {
     navigator.geolocation.getCurrentPosition((result: GeoLocationPosition) => {
       const weatherForeCastRequest = this.weatherService.getWeatherForecastOfCity(result.coords.latitude, result.coords.longitude);
       const geolocationRequest = this.weatherService.getCityNameByCoordinates(result.coords.latitude, result.coords.longitude);
-      forkJoin({weather:weatherForeCastRequest , geolocation:geolocationRequest}).subscribe(({ weather , geolocation}) => {
+      forkJoin({weather: weatherForeCastRequest , geolocation: geolocationRequest}).subscribe(({ weather, geolocation}) => {
         this.handleWeatherResponse(weather);
         this.handleCityNameResponse(geolocation);
-      })
+      });
     });
   }
 
@@ -37,11 +37,11 @@ export class WeatherComponent implements OnInit {
     this.weatherForecast.daily.data.forEach(item => {
       item.timeDate = new Date(item.time * 1000);
       item.icon.includes(STATUS.clear);
-    })
+    });
 
     this.weatherForecast.hourly.data.forEach(item => {
       item.timeDate = new Date(item.time * 1000);
-    })
+    });
   }
 
   handleCityNameResponse(geolocation: GeolocationResponse){

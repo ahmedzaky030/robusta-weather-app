@@ -12,11 +12,12 @@ import { WeatherStatusComponent } from './weather-status/weather-status.componen
 
 
 @NgModule({
-  declarations: [WeatherComponent, HeaderComponent, WeatherMainComponent, WeatherFooterComponent, DegreeSwitchComponent, DegreeConverterPipe, WeatherStatusComponent],
+  declarations: [WeatherComponent, HeaderComponent, WeatherMainComponent, WeatherFooterComponent,
+    DegreeSwitchComponent, DegreeConverterPipe, WeatherStatusComponent],
   imports: [
     CommonModule,
     HttpClientModule
   ],
-  exports:[WeatherComponent]
+  exports: [WeatherComponent]
 })
 export class WeatherModule { }
