@@ -1,0 +1,3 @@
+<app-header [currentDegree]="currentDegree" (ChangedDegree)="OnChangeDegree($event)"></app-header>
+<app-weather-main [targetConversion]="currentDegree"></app-weather-main>
+<app-weather-footer [targetConversion]="currentDegree"></app-weather-footer>

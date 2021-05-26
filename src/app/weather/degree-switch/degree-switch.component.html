@@ -1,0 +1,5 @@
+<div class="degree-switch">
+    <span [ngClass]="{'active': currentDegree === this.degrees.celisius}" (click)="selectDegree(this.degrees.celisius)" class="degree ">c</span>
+    <span class="vertical-splitter"></span>
+    <span [ngClass]="{'active': currentDegree === this.degrees.fahrenheit}" (click)="selectDegree(this.degrees.fahrenheit)" class="degree ">f</span>
+  </div>

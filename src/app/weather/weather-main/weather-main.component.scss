@@ -1,0 +1,41 @@
+.main{
+    //border: 2px solid  white ;
+    width: 80%;
+    margin: 20px auto  40px;
+    height: 40vh;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.important-data{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 10px;
+
+}
+
+.current-status{
+    font-size: 8rem;
+    width: 100%;
+}
+
+.more-details{
+    margin: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    & h1 {
+        font-size: 8.5rem;
+    }
+    & h4 {
+        font-size: 4.5rem;
+    }
+    & p{
+        font-size: 2rem;
+    }
+}

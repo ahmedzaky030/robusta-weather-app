@@ -1,0 +1,9 @@
+.weather-status{
+    display: flex;
+    flex-direction: column;
+    height: 22vh;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    font-weight: bolder;
+}

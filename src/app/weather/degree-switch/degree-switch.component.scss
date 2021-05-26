@@ -1,0 +1,21 @@
+.degree-switch{
+    width: fit-content;
+    //border: 1px solid white;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;    
+    & .active {
+        background-color: #567a91;
+    }
+    & .degree {
+        width:40px;
+        padding: 5px;
+        cursor: pointer;
+    }
+    & .vertical-splitter{
+        width:1px;
+        
+        background-color: white;
+        height: auto;
+    }
+}
