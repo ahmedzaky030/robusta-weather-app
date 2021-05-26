@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { WeatherComponent } from './weather.component';
 import { HeaderComponent } from './header/header.component';
 import { WeatherMainComponent } from './weather-main/weather-main.component';
@@ -13,7 +14,8 @@ import { WeatherStatusComponent } from './weather-status/weather-status.componen
 @NgModule({
   declarations: [WeatherComponent, HeaderComponent, WeatherMainComponent, WeatherFooterComponent, DegreeSwitchComponent, DegreeConverterPipe, WeatherStatusComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    HttpClientModule
   ],
   exports:[WeatherComponent]
 })

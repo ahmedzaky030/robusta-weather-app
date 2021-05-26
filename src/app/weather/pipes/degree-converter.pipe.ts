@@ -8,10 +8,8 @@ export class DegreeConverterPipe implements PipeTransform {
 
   transform(value: number, targetConversion: string): number {
     if(targetConversion === DEGREE.fahrenheit){
-      return Math.ceil((value * 1.8) + 32);
-    } else {
-      return Math.ceil((value -32) * 5 / 9);
-    }
+      return Math.floor((value * 1.8) + 32);
+    } else return Math.floor(value) 
   }
 
 }

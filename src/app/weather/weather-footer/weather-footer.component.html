@@ -10,7 +10,9 @@
     <div class="tab-content" id="myTabContent">
       <div class="tab-pane fade " id="hourly" [ngClass]="{'show active': activeTab ==='hourly'}" role="tabpanel" aria-labelledby="hourly-tab">
         <div class="status-container">
-          <app-weather-status [targetConversion]="targetConversion" [degree]="81" [degreeTime]="'Sunday'" [icon]="'sunny'"></app-weather-status>
+          <app-weather-status *ngFor="let item of weatherForecast?.hourly?.data" [targetConversion]="targetConversion"
+                            [temperature]="item.temperature" [degreeTime]="item.timeDate.toLocaleTimeString()" [icon]="'sunny'"></app-weather-status>
+          <!-- <app-weather-status [targetConversion]="targetConversion" [degree]="81" [degreeTime]="'Sunday'" [icon]="'sunny'"></app-weather-status>
           <app-weather-status [targetConversion]="targetConversion" [degree]="70" [degreeTime]="'Monday'" [icon]="'cloudy'"></app-weather-status>
           <app-weather-status [targetConversion]="targetConversion" [degree]="50" [degreeTime]="'12:00'" [icon]="'sunny'"></app-weather-status>
           <app-weather-status [targetConversion]="targetConversion" [degree]="30" [degreeTime]="'15:00'" [icon]="'cloudy'"></app-weather-status>
@@ -27,13 +29,15 @@
           <app-weather-status [targetConversion]="targetConversion" [degree]="81" [degreeTime]="'18:00'" [icon]="'sunny'"></app-weather-status>
           <app-weather-status [targetConversion]="targetConversion" [degree]="81" [degreeTime]="'18:00'" [icon]="'sunny'"></app-weather-status>
           <app-weather-status [targetConversion]="targetConversion" [degree]="81" [degreeTime]="'18:00'" [icon]="'sunny'"></app-weather-status>
-          <app-weather-status [targetConversion]="targetConversion" [degree]="81" [degreeTime]="'18:00'" [icon]="'sunny'"></app-weather-status>
+          <app-weather-status [targetConversion]="targetConversion" [degree]="81" [degreeTime]="'18:00'" [icon]="'sunny'"></app-weather-status> -->
 
         </div>
       </div>
       <div class="tab-pane fade " [ngClass]="{'show active': activeTab ==='weekly'}" id="weekly" role="tabpanel" aria-labelledby="weekly-tab">
         <div class="status-container">
-          <app-weather-status [targetConversion]="targetConversion" [degree]="81" [degreeTime]="'18:00'" [icon]="'sunny'"></app-weather-status>
+          <app-weather-status *ngFor="let item of weatherForecast?.daily?.data" [targetConversion]="targetConversion"
+                            [temperatureHigh]="item.temperatureHigh" [temperatureLow]="item.temperatureLow" [degreeTime]="item.timeDate.toLocaleDateString()" [icon]="'sunny'"></app-weather-status>
+          <!-- <app-weather-status [targetConversion]="targetConversion" [degree]="81" [degreeTime]="'18:00'" [icon]="'sunny'"></app-weather-status>
           <app-weather-status [targetConversion]="targetConversion" [degree]="70" [degreeTime]="'17:00'" [icon]="'cloudy'"></app-weather-status>
           <app-weather-status [targetConversion]="targetConversion" [degree]="50" [degreeTime]="'12:00'" [icon]="'sunny'"></app-weather-status>
           <app-weather-status [targetConversion]="targetConversion" [degree]="30" [degreeTime]="'15:00'" [icon]="'cloudy'"></app-weather-status>
@@ -50,7 +54,7 @@
           <app-weather-status [targetConversion]="targetConversion" [degree]="81" [degreeTime]="'18:00'" [icon]="'sunny'"></app-weather-status>
           <app-weather-status [targetConversion]="targetConversion" [degree]="81" [degreeTime]="'18:00'" [icon]="'sunny'"></app-weather-status>
           <app-weather-status [targetConversion]="targetConversion" [degree]="81" [degreeTime]="'18:00'" [icon]="'sunny'"></app-weather-status>
-          <app-weather-status [targetConversion]="targetConversion" [degree]="81" [degreeTime]="'18:00'" [icon]="'sunny'"></app-weather-status>
+          <app-weather-status [targetConversion]="targetConversion" [degree]="81" [degreeTime]="'18:00'" [icon]="'sunny'"></app-weather-status> -->
 
         </div>
         

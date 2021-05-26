@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { STATUS } from '../config/constants';
 
 @Component({
   selector: 'app-weather-status',
@@ -8,8 +9,11 @@ import { Component, Input, OnInit } from '@angular/core';
 export class WeatherStatusComponent implements OnInit {
   @Input() targetConversion: string;
   @Input() icon: string;
-  @Input() degree: number;
+  @Input() temperature: number;
+  @Input() temperatureHigh: number;
+  @Input() temperatureLow: number;
   @Input() degreeTime: string;
+  status = STATUS;
   constructor() { }
 
   ngOnInit(): void {

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { WeatherForecastResponse } from '../models/weatherForecast.model';
 
 @Component({
   selector: 'app-weather-footer',
@@ -7,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class WeatherFooterComponent implements OnInit {
   @Input() targetConversion: string;
+  @Input() weatherForecast: WeatherForecastResponse;
   activeTab: string ='hourly'
   constructor() { }
 
